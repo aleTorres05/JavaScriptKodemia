@@ -695,21 +695,3 @@ const detailsMovies = (listaPeliclas) => listaPeliclas.reduce((accum, current) =
 
 
 console.log(detailsMovies(movies))
-/*
-  {
-      director: "Christopher Nolan",
-      genre: "Ciencia Ficción",
-      country: "Estados Unidos",
-      duration: "148 minutos",
-      protagonists: [
-        { name: "Leonardo DiCaprio", age: 35 },
-        { name: "Joseph Gordon-Levitt", age: 29 },
-      ],
-      releaseYear: 2010,
-      title: "Inception",
-      synopsis:
-        "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños, se le da la tarea inversa de plantar una idea en la mente de un CEO.",
-      oscarAwards: 4,
-      rating: "PG-13",
-    }
-*/
