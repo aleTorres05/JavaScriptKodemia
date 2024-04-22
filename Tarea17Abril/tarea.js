@@ -693,5 +693,5 @@ const detailsMovies = (listaPeliclas) => listaPeliclas.reduce((accum, current) =
         ]
     },[])
 
-
+document.get
 console.log(detailsMovies(movies))
