@@ -12,60 +12,26 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
+    <div class="row">
+        <form action="" class="bg-dark text-white border rounded shadow p-3 col-6">
+            <div class="form-group">
+                <label for="">Nombre completo:</label>
+                <input type="text" class="form-control info-person" name="FullName" required/>
+            </div>
+            <div class="form-group">
+                <label for="">Correo:</label>
+                <input type="email" class="form-control info-person" name="Email" required/>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control info-person" name="Password" required/>
+            </div>
+            <button id="createPerson" class="btn btn-primary">Crear usuario</button>
+        </form>
         <div class="col-6">
-          <h3>Selecciona el elemento que quieres ocultar</h3>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <label for="">Elemento 01</label><input class="checkbox" type="checkbox" data-target="#caja1" />
-            </li>
-            <li class="list-group-item">
-              <label for="">Elemento 02</label><input class="checkbox" type="checkbox" data-target="#caja2" />
-            </li>
-            <li class="list-group-item">
-              <label for="">Elemento 03</label><input class="checkbox" type="checkbox" data-target="#caja3" />
-            </li>
-            <li class="list-group-item">
-              <label for="">Elemento 04</label><input class="checkbox" type="checkbox" data-target="#caja4" />
-            </li>
-            <li class="list-group-item">
-              <label for="">Elemento 05</label><input class="checkbox" type="checkbox" data-target="#caja5" />
-            </li>
-          </ul>
+            <ul id="listPersons"></ul>
         </div>
-        <div class="col-6">
-          <div class="d-flex gap-3 flex-wrap">
-            <div
-              id= "caja1" class="p-5 d-flex justify-content-center align-items-center bg-dark text-white"
-            >
-              Elemento 01
-            </div>
-            <div
-              id= "caja2" class="p-5 d-flex justify-content-center align-items-center bg-primary"
-            >
-              Elemento 02
-            </div>
-            <div
-              id= "caja3" class="p-5 d-flex justify-content-center align-items-center bg-secondary"
-            >
-              Elemento 03
-            </div>
-            <div
-              id= "caja4" class="p-5 d-flex justify-content-center align-items-center bg-success"
-            >
-              Elemento 04
-            </div>
-            <div
-              id= "caja5" class="p-5 d-flex justify-content-center align-items-center bg-warning"
-            >
-              Elemento 05
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
