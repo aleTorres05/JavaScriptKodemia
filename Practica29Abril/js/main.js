@@ -1,8 +1,7 @@
-import { saveEntry } from "../database/db.js";
+import { saveEntry, getBlogs } from "../database/db.js";
 
 const buildBlogEntry = () => {
   let inputs = document.querySelectorAll("#post-form input");
-
   let saveEntryButton = document.getElementById("save-entry-button");
 
   saveEntryButton.addEventListener("click", () => {
@@ -13,11 +12,20 @@ const buildBlogEntry = () => {
     });
 
     saveEntry(blogEntry);
+    printBlogs("blogs-list")
+
   });
 };
 
+const printBlogs = async (wrapperId) => {
+  let blogsArray = await getBlogs()
+  let wrapper = document.getElementById(wrapperId);
+  wrapper.innerHTML = "";
+
+  blogsArray.forEach((blog) => wrapper.append(createBlogEntry(blog)));
+};
+
 const createBlogEntry = (blogobj) => {
-  let list_blog = document.getElementById("blogs-list");
 
   let { title, content, autor } = blogobj;
   let blogItem = document.createElement("li");
@@ -44,7 +52,10 @@ const createBlogEntry = (blogobj) => {
   let blogEditBtn = document.createElement("button");
   blogEditBtn.classList.add("btn", "btn-primary", "text-center");
   blogEditBtn.innerHTML = "&#x270E;";
+
+  blogItem.append(blogTitle, blogContent, blogAutor, blogEditBtn);
+
+  return blogItem;
 };
 
 buildBlogEntry();
-createBlogEntry();
